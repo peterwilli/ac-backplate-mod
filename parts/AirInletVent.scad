@@ -27,16 +27,15 @@ module airInletVent() {
     }
 
     module cups() {
-        thickness = 3;
         module left() {
             firstHeight = 49.90;
             secondHeight = 24.96;
             width = 12.25;
             translate([0, ventHeight - firstHeight - borderThickness]) 
-            cube([width, firstHeight, thickness]);
+            cube([width, firstHeight, cupsThickness]);
 
             translate([0, 36, 0]) 
-            cube([width, secondHeight, thickness]);
+            cube([width, secondHeight, cupsThickness]);
         }
 
         module right() {
@@ -44,10 +43,10 @@ module airInletVent() {
             secondHeight = 24.96;
             width = 7.35;
             translate([ventWidth - width, ventHeight - firstHeight - borderThickness]) 
-            cube([width, firstHeight, thickness]);
+            cube([width, firstHeight, cupsThickness]);
 
             translate([ventWidth - width, 36, 0]) 
-            cube([width, secondHeight, thickness]);
+            cube([width, secondHeight, cupsThickness]);
         }
 
         left();
